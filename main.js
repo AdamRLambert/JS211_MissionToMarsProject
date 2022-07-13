@@ -9,7 +9,61 @@ const jobTypes = {
   programmer: 'Any Ship!'
 };
 
-// Your code will go here
+// Begin by reading the tests in the bottom of the file. Make sure you understand them.
+// Build a class for CrewMember.
+// can enter ship
+// should have a name, a job, a specialSkill and ship upon instantiation', 
+class CrewMember {
+
+  constructor (name, job, specialSkill, ship) {
+
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship=ship;
+  }
+
+  enterShip =(boat) => {
+
+  this.ship = boat;
+  //take the incoming ship push it into the ships crew arary fo this crew member
+  this.ship.crew.push(this)
+
+  }
+
+
+}
+
+
+// Build a class for Ship.
+// should have a name, a type, an ability and an empty crew upon instantiation'
+class Ship{
+
+  constructor (name, type, ability, crew) {
+  this.name = name;
+  this.type = type;
+  this.ability = ability;
+  this.crew = [];
+
+}
+missionStatement = () => {
+
+//need at least 1 crew member to perform a mission so the crew aray length 
+if (this.crew.length ===0) {
+  return "Can't perform a mission yet."
+
+}
+else {
+
+  return this.ability
+}
+}
+}
+
+
+// Make sure CrewMembers can enter Ships.
+// Make sure to return a mission statement.
+// Turn in the repo URL
 
 
 
